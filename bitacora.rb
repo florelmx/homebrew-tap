@@ -5,21 +5,21 @@
 class Bitacora < Formula
   desc "Ship's log for AI agents. Persistent memory that survives between sessions."
   homepage "https://github.com/florelmx/bitacora"
-  version "0.5.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/florelmx/bitacora/releases/download/v0.5.0/bitacora_darwin_amd64.tar.gz"
-      sha256 "fc34b3391e073c39bbb546bd5f294da960bdc2cfd9c1dcd35d311b841eb29997"
+      url "https://github.com/florelmx/bitacora/releases/download/v1.0.0/bitacora_darwin_amd64.tar.gz"
+      sha256 "2aca094b184e3614da9ab43a4d2891970d7911cb9bea54f31218c2f1a50e19ac"
 
       define_method(:install) do
         bin.install "bitacora"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/florelmx/bitacora/releases/download/v0.5.0/bitacora_darwin_arm64.tar.gz"
-      sha256 "82f4475ff75d7b374cfd87722349a18e6e4da8852225476cfa970bf12ebd7c0d"
+      url "https://github.com/florelmx/bitacora/releases/download/v1.0.0/bitacora_darwin_arm64.tar.gz"
+      sha256 "afcc8b4719f8d856d266917226370492e9c7305e1d213ca146c31e679624bb7d"
 
       define_method(:install) do
         bin.install "bitacora"
@@ -29,15 +29,15 @@ class Bitacora < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/florelmx/bitacora/releases/download/v0.5.0/bitacora_linux_amd64.tar.gz"
-      sha256 "71fcf0f23773de55224b01862b2f40288de7b09b081b4f430fdef7be15076cf1"
+      url "https://github.com/florelmx/bitacora/releases/download/v1.0.0/bitacora_linux_amd64.tar.gz"
+      sha256 "f221f30ad39919b74deda2b8446fbb87de5d72b811f26855b61d23e68eb07c74"
       define_method(:install) do
         bin.install "bitacora"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/florelmx/bitacora/releases/download/v0.5.0/bitacora_linux_arm64.tar.gz"
-      sha256 "3c5179da2925cb10bf76dd9deb932496229376ca73a24828b1f06864b8abb86c"
+      url "https://github.com/florelmx/bitacora/releases/download/v1.0.0/bitacora_linux_arm64.tar.gz"
+      sha256 "903473af58c89d9a9ba6362295aaf679b9c0b0926528abe840204d917f2be4c6"
       define_method(:install) do
         bin.install "bitacora"
       end
